@@ -25,22 +25,7 @@ $blogData = getAllBlog();
       </p>
       <a href="/blog/detail.php?id=<?php echo $archive['id'] ?>">詳細</a>
       <a href="/blog/update_form.php?id=<?php echo $archive['id'] ?>">編集</a>
-      <div class="comment">
-        <h3>通りすがり１</h3>
-        <p>
-          記事１へのコメントです。<br>
-          記事１へのコメントです。<br>
-        </p>
-      </div>
-      <div class="comment">
-        <h3>通りすがり２</h3>
-        <p>
-          記事１へのコメントです。
-        </p>
-      </div>
-      <p class="commment_link">
-        投稿日：2011/6/7
-        <a href="#">コメント</a>
+        投稿日or更新日：<?php echo $archive['post_at']; ?>
       <?php endforeach; ?>
       </p>
   </div>
