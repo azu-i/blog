@@ -1,0 +1,54 @@
+body {
+  background-color:#bc8f8f;
+  font-size: 14px;
+  font-family: Helvetica,Arial,sans-serif;
+}
+a:link, a:visited {color: #a00;}
+p {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 10px 0;
+  padding: 0;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+h2 {
+  margin: 0 -20px 10px -20px;
+  padding: 5px 10px;
+  background-color: #2f4f4f;
+  color: white;
+  font-size: 18px;
+}
+h3 {
+  margin: 0 -15px 10px -15px;
+  padding: 5px 10px;
+  background-color:darkslategray;
+  color: white;
+  font-size: 14px;
+}
+.post {
+  width: 500px; 
+  margin: 0 auto 15px auto;
+  padding: 0 20px 20px 20px; 
+  background-color: #f0f8ff; 
+}
+.comment {
+  margin: 10px 0;
+  padding: 0 15px 15px 15px; 
+  background-color: #dcdcdc; 
+}
+.commment_link {
+  text-align: right;
+}
+
+.post-link{
+  margin: 10px 0;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  text-align: center; 
+
+}
