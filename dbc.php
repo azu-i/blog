@@ -63,4 +63,18 @@
     return $result;
   }
 
+  function delete($id)
+  {
+    if (empty($id)) throw new Exception('IDが不正です');
+
+    $dbh = dbConnect();
+    //SQL準備
+    $stmt = $dbh->prepare('DELETE FROM blog Where id = :id');
+    $stmt->bindValue(':id', (int)$id, PDO::PARAM_INT);
+    //SQL実行
+    $stmt->execute();
+
+    return $result;
+  }
+
 ?>

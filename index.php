@@ -1,8 +1,12 @@
 <?php
 require_once('dbc.php');
 
-
 $blogData = getAllBlog();
+
+function h($s)
+{
+  return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -23,11 +27,12 @@ $blogData = getAllBlog();
       <p>
         <?php echo $archive['content']; ?>
       </p>
-      <a href="/blog/detail.php?id=<?php echo $archive['id'] ?>">詳細</a>
-      <a href="/blog/update_form.php?id=<?php echo $archive['id'] ?>">編集</a>
-        投稿日or更新日：<?php echo $archive['post_at']; ?>
-      <?php endforeach; ?>
-      </p>
+      <a href="/blog/detail.php?id=<?php echo h($archive['id']) ?>">詳細</a>
+      <a href="/blog/update_form.php?id=<?php echo h($archive['id']) ?>">編集</a>
+      <a href="/blog/blog_delete.php?id=<?php echo h($archive['id']) ?>">削除</a>
+      投稿日or更新日：<?php echo h($archive['post_at']) ?>
+    <?php endforeach; ?>
+    </p>
   </div>
 </body>
 
